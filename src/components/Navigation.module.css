@@ -4,8 +4,10 @@
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	background-color: #fff;
 	box-shadow: 0 5px 5px 5px rgb(201, 201, 201);
 	overflow: hidden;
+	z-index: 1;
 }
 
 .link,
@@ -34,13 +36,13 @@ link:visited {
 	overflow: scroll;
 }
 
-/* add animation */
 .checkoutBtn {
 	position: fixed;
 	right: 10px;
 	top: 7rem;
 	padding: 0.5rem;
 	background: none;
+	background-color: transparent;
 	cursor: pointer;
 }
 
@@ -50,14 +52,14 @@ link:visited {
 
 @keyframes checkout {
 	0% {
-		top: 7rem;
+		transform: scale(1);
 	}
 	50% {
-		top: 6.5rem;
+		transform: scale(1.1);
 	}
 
 	100% {
-		top: 7rem;
+		transform: scale(1);
 	}
 }
 
