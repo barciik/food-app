@@ -1,7 +1,7 @@
 {
 	"name": "food",
 	"version": "0.1.0",
-	"homepage": "https://github.com/barciik/food-app.git",
+	"homepage": "https://barciik.github.io/food-app",
 	"private": true,
 	"dependencies": {
 		"@reduxjs/toolkit": "^1.8.3",
