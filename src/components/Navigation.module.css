@@ -38,12 +38,22 @@ link:visited {
 
 .checkoutBtn {
 	position: fixed;
-	right: 10px;
+	right: 0;
 	top: 7rem;
 	padding: 0.5rem;
 	background: none;
 	background-color: transparent;
 	cursor: pointer;
+}
+
+.light {
+	color: #fff;
+	font-size: 40rem;
+	border: white;
+}
+
+.dark {
+	color: #000;
 }
 
 .checkoutAnimation {
@@ -78,6 +88,9 @@ link:visited {
 }
 
 @media (min-width: 768px) {
+	.body {
+		max-width: 100rem;
+	}
 	.link {
 		padding: 1rem 3rem;
 	}
