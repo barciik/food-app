@@ -1,0 +1,45 @@
+.body {
+	display: flex;
+	flex-direction: column;
+	width: 70%;
+	background-color: rgb(250, 250, 250);
+	margin: 2rem 1rem;
+	box-shadow: 10px 10px 10px 2px rgb(201, 201, 201);
+}
+
+.img {
+	height: 10rem;
+	width: 100%;
+}
+
+.price {
+	align-self: flex-end;
+	width: 5rem;
+	background: none;
+	border: 1px solid rgb(201, 201, 201);
+	border-radius: 5px;
+	padding: 0.5rem;
+	margin: 0.5rem;
+	cursor: pointer;
+	transition: background-color 0.3s;
+}
+
+.price:hover {
+	background-color: rgb(201, 201, 201);
+}
+
+.name {
+	text-align: center;
+	text-transform: uppercase;
+}
+
+.desc {
+	text-align: center;
+	margin-bottom: 2rem;
+}
+
+@media (min-width: 768px) {
+	.body {
+		width: 20rem;
+	}
+}

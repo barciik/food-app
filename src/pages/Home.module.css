@@ -1,0 +1,44 @@
+.body {
+	position: absolute;
+	top: 0;
+	z-index: -2;
+	background-image: url(https://cdn.pixabay.com/photo/2016/11/18/22/21/restaurant-1837150_1280.jpg);
+	background-position: center;
+	background-size: cover;
+	width: 100%;
+	height: 100vh;
+}
+
+.shadow {
+	position: absolute;
+	top: 0;
+	height: 100%;
+	width: 100%;
+	z-index: -1;
+	background-color: rgba(0, 0, 0, 0.5);
+}
+
+.welcome {
+	position: relative;
+	top: 40%;
+	text-align: center;
+	font-size: 1.5rem;
+	color: #fff;
+	animation: welcomeEntrance 1s;
+}
+
+@keyframes welcomeEntrance {
+	0% {
+		top: 0%;
+		opacity: 0;
+	}
+
+	50% {
+		opacity: 0.5;
+	}
+
+	100% {
+		top: 40%;
+		opacity: 1;
+	}
+}

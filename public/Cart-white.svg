@@ -1,0 +1,10 @@
+<svg width="32" height="28" viewBox="0 0 20 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+<circle id="Ellipse 1" cx="3.5" cy="13.5" r="2" stroke="white"/>
+<circle id="Ellipse 3" cx="16.5" cy="13.5" r="2" stroke="white"/>
+<g id="Rectangle 1">
+<mask id="path-3-inside-1_0_1" fill="white">
+<path d="M0 0H20V8C20 9.10457 19.1046 10 18 10H2C0.895431 10 0 9.10457 0 8V0Z"/>
+</mask>
+<path d="M0 0H20H0ZM21 8C21 9.65685 19.6569 11 18 11H2C0.343146 11 -1 9.65685 -1 8H1C1 8.55228 1.44772 9 2 9H18C18.5523 9 19 8.55228 19 8H21ZM2 11C0.343146 11 -1 9.65685 -1 8V0H1V8C1 8.55228 1.44772 9 2 9V11ZM21 0V8C21 9.65685 19.6569 11 18 11V9C18.5523 9 19 8.55228 19 8V0H21Z" fill="white" mask="url(#path-3-inside-1_0_1)"/>
+</g>
+</svg>
