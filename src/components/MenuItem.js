@@ -8,8 +8,6 @@ const MenuItem = (props) => {
 
 	const addToCart = () => {
 		dispatch(cartActions.addToCart(props));
-		// dispatch(cartActions.addAnimaiton());
-		// dispatch(cartActions.removeAnimaiton());
 	};
 
 	return (

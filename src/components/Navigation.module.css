@@ -81,6 +81,7 @@ link:visited {
 	border-radius: 3px;
 	padding: 0.5rem;
 	margin: 0.5rem;
+	cursor: pointer;
 	/* align-self: center; */
 }
 

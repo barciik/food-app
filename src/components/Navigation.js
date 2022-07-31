@@ -1,21 +1,24 @@
 import React, { useState } from 'react';
 import { NavLink, useLocation } from 'react-router-dom';
-import { useSelector } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import nav from './Navigation.module.css';
 import NavItem from './NavItem';
 import { useEffect } from 'react';
+import { cartActions } from '../store';
 
 const Navigation = (props) => {
-	const [isVisible, setIsVisible] = useState(false);
+	// const [isVisible, setIsVisible] = useState(false);
 	const [isAnimated, setIsAnimated] = useState(false);
 	const [isHome, setisHome] = useState();
 	const cart = useSelector((state) => state.counter.cart);
 	const totalPrice = useSelector((state) => state.counter.totalPrice);
+	const isVisible = useSelector((state) => state.counter.isVisible);
 	const isEmpty = totalPrice !== 0;
 	const location = useLocation();
+	const dispatch = useDispatch();
 
 	const checkoutPopUp = () => {
-		setIsVisible(!isVisible);
+		dispatch(cartActions.showCart());
 	};
 	const checkoutBtnClasses = `${nav.checkoutBtn} ${
 		isAnimated ? nav.checkoutAnimation : ''
@@ -82,7 +85,14 @@ const Navigation = (props) => {
 						})}
 						{!isEmpty && <h3 className={nav.totalPrice}>Your cart is empty</h3>}
 						<p className={nav.totalPrice}>{`Total: ${totalPrice}$`}</p>
-						<button className={nav.orderBtn}>Checkout</button>
+						<button
+							className={nav.orderBtn}
+							onClick={() => {
+								dispatch(cartActions.openCheckout());
+							}}
+						>
+							Checkout
+						</button>
 					</div>
 				)}
 			</div>

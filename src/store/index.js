@@ -1,8 +1,13 @@
 import { configureStore, createSlice } from '@reduxjs/toolkit';
 
 const counterReducer = createSlice({
-	name: 'test',
-	initialState: { cart: [], totalPrice: 0, itemAdded: false },
+	name: 'cart',
+	initialState: {
+		cart: [],
+		totalPrice: 0,
+		checkoutOpen: false,
+		isVisible: false,
+	},
 	reducers: {
 		addToCart(state, action) {
 			const id = action.payload.name;
@@ -35,11 +40,18 @@ const counterReducer = createSlice({
 				existingItem.quantity--;
 			}
 		},
-		addAnimaiton(state) {
-			state.cart.itemAdded = true;
+		openCheckout(state) {
+			state.checkoutOpen = true;
+			state.isVisible = false;
 		},
-		removeAnimaiton(state) {
-			state.cart.itemAdded = false;
+		closeCheckout(state) {
+			state.checkoutOpen = false;
+		},
+		showCart(state) {
+			if (state.checkoutOpen) {
+				return;
+			}
+			state.isVisible = !state.isVisible;
 		},
 	},
 });
