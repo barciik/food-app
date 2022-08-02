@@ -13,6 +13,7 @@ const Navigation = (props) => {
 	const cart = useSelector((state) => state.counter.cart);
 	const totalPrice = useSelector((state) => state.counter.totalPrice);
 	const isVisible = useSelector((state) => state.counter.isVisible);
+	const checkoutOpen = useSelector((state) => state.counter.checkoutOpen)
 	const isEmpty = totalPrice !== 0;
 	const location = useLocation();
 	const dispatch = useDispatch();
@@ -61,7 +62,7 @@ const Navigation = (props) => {
 			<NavLink className={nav.link} to='/food-app/info'>
 				Info
 			</NavLink>
-			<div>
+			{!checkoutOpen && <div>
 				{isHome ? (
 					<button onClick={checkoutPopUp} className={checkoutBtnClassesWhite}>
 						<img src='Cart-white.svg' alt='cart' />
@@ -95,7 +96,7 @@ const Navigation = (props) => {
 						</button>
 					</div>
 				)}
-			</div>
+			</div>}
 		</div>
 	);
 };
